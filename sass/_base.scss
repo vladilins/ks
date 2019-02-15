@@ -1,0 +1,79 @@
+// COLOR VARIABLES
+
+.--green {
+  color: #00a098;
+}
+.--red {
+  color: #e30613;
+}
+.--purpule {
+  color: #98187d;
+}
+
+// RESPONSIVE BREAKPOINTS
+$bp-large: 1050px; // 1000px
+$bp-medium: 810px; // 800px;
+$bp-small: 37.5em; // 600px;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+
+  @media only screen and (max-width: $bp-large) {
+    // font-size: 50%;
+  }
+}
+
+body {
+}
+.container {
+  // max-width: 1000px;
+  display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  // grid-template-columns: repeat(3, 1fr);
+  // grid-template-rows: 20vh 80vh min-content min-content 30vh;
+  // grid-template-areas: "header header header
+  // main main main
+  // product product product
+  // items items items
+  // footer footer footer
+  // ";
+  grid-template-rows: 80px min-content min-content min-content;
+  grid-template-columns: 1fr [start] repeat(3, minmax(min-content, 333px)) [end] 1fr;
+  @media only screen and (max-width: $bp-large) {
+    grid-template-columns: repeat(3, minmax(min-content, 250px));
+  }
+}
+
+// .container {
+//   display: grid;
+//   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+//   grid-template-columns:
+//     [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr)
+//     [center-start] repeat(
+//       8,
+//       [col-start] minmax(min-content, 14rem) [col-end]
+//     ) [center-end] minmax(6rem, 1fr)
+//     [full-end];
+
+//   @media only screen and (max-width: $bp-large) {
+//     grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+//     grid-template-columns:
+//       [full-start] minmax(6rem, 1fr) [center-start] repeat(
+//         8,
+//         [col-start] minmax(min-content, 14rem) [col-end]
+//       )
+//       [center-end] minmax(6rem, 1fr) [full-end];
+//   }
+
+//   @media only screen and (max-width: $bp-medium) {
+//     grid-template-rows: 6rem calc(100vh - 6rem);
+//   }
+// }

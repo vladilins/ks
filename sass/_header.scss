@@ -1,0 +1,40 @@
+.header {
+  grid-column: start / end;
+  display: grid;
+
+  grid-template-columns: min-content minmax(min-content, max-content);
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    margin-top: 10px;
+    // width: 214px;
+    // height: 60px;
+    @media only screen and (max-width: 930px) {
+      float: center;
+    }
+  }
+  &__h1 {
+    font-family: "Roboto", sans-serif;
+    color: #007360;
+    font-size: 31.79px; /* Approximation due to font substitution */
+    line-height: 37px; /* Approximation due to font substitution */
+    text-align: left;
+    transform: scaleX(
+      1.0012
+    ); /* width and height properties ommitted due to transform */
+    @media only screen and (max-width: 930px) {
+      display: none;
+    }
+  }
+}
+
+.main {
+  grid-column: start / end;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+  }
+}
